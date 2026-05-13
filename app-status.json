@@ -1,0 +1,18 @@
+{
+  "title": "IN DEVELOPMENT",
+  "severity": "mild",
+  "severity-types": [
+    "mild",
+    "fire",
+    "diablo"
+  ],
+  "timestamp": "2026-05-13T04:49:01Z",
+  "body": "Pre-release. Coming Soon.",
+  "affected": [
+    "ios"
+  ],
+  "affected-type": [
+    "ios",
+    "android"
+  ]
+}
