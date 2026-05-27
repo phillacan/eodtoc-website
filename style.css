@@ -39,8 +39,8 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 18% 14%, rgba(255, 103, 0, 0.11), transparent 30%),
-    radial-gradient(circle at 82% 36%, rgba(99, 201, 215, 0.08), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(99, 201, 215, 0.08), transparent 28%),
+    radial-gradient(circle at 18% 92%, rgba(255, 103, 0, 0.1), transparent 30%),
     linear-gradient(180deg, #080b12 0%, #0b1017 42%, #080b12 100%);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -81,7 +81,7 @@ main {
   opacity: var(--top-progress);
   pointer-events: none;
   transform: translate(-50%, var(--top-offset));
-  transition: opacity 180ms ease, transform 180ms ease, width 260ms ease, padding 260ms ease, gap 260ms ease;
+  transition: opacity 140ms ease, transform 140ms ease, width 220ms ease, padding 220ms ease, gap 220ms ease;
   backdrop-filter: blur(18px);
   box-shadow: 0 18px 50px rgba(0, 0, 0, var(--top-shadow-alpha));
 }
@@ -91,7 +91,7 @@ body.is-top-visible .top-bar {
 }
 
 body.is-at-end .top-bar {
-  width: min(640px, calc(100% - 18px));
+  width: min(600px, calc(100% - 18px));
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
@@ -236,7 +236,7 @@ body.is-at-end .top-bar .soon-row--compact {
   padding: min(42vh, 360px) 0 96px;
   opacity: var(--scroll-progress);
   transform: translateY(18px);
-  transition: opacity 220ms ease, transform 260ms ease;
+  transition: opacity 150ms ease, transform 170ms ease;
 }
 
 .end-availability {
@@ -445,7 +445,7 @@ body.is-scrolled .feature-scroll {
 .preview-image-stack {
   inset: 10px;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 22px;
   background: #111820;
   box-shadow: inset 0 0 0 1px rgba(255, 224, 0, 0.16);
 }
@@ -900,6 +900,18 @@ body.is-at-end .email {
 
   .feature-copy h2 {
     font-size: clamp(29px, 9vw, 42px);
+  }
+
+  .feature-card--security {
+    gap: 18px;
+  }
+
+  .feature-card--security .visual-security {
+    min-height: 150px;
+  }
+
+  .feature-card--security .security-lock {
+    font-size: clamp(82px, 24vw, 116px);
   }
 
   .device-shell {
