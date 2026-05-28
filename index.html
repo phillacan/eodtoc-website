@@ -143,9 +143,9 @@
       }
 
       function updateScrollState() {
-        const progress = clamp(window.scrollY / 90, 0, 1);
+        const progress = clamp(window.scrollY / 115, 0, 1);
         const splashProgress = clamp(window.scrollY / 130, 0, 1);
-        const topProgress = clamp((window.scrollY - 42) / 48, 0, 1);
+        const topProgress = clamp((window.scrollY - 46) / 58, 0, 1);
         root.style.setProperty("--scroll-progress", progress.toFixed(3));
         root.style.setProperty("--top-progress", topProgress.toFixed(3));
         root.style.setProperty("--top-offset", `${(-14 + (14 * topProgress)).toFixed(2)}px`);
