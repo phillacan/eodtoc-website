@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security | EOD TOC</title>
+    <link rel="icon" type="image/png" href="../favicon-small.png">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body class="security-page">
+    <header class="security-nav" aria-label="EOD TOC security page">
+      <a class="title title--compact" href="../" aria-label="EOD TOC home">
+        <span class="eod">EOD</span>
+        <span class="toc">TOC</span>
+      </a>
+      <span class="security-nav-label">Security</span>
+    </header>
+
+    <main class="security-main">
+      <article class="security-article">
+        <header class="security-hero">
+          <h1>How Technician data is protected.</h1>
+          <div class="security-byline">
+            <span>Phil Lacan, Developer</span>
+            <span>Updated 06.04.2026</span>
+          </div>
+          <p>
+            EOD Technicians (Techs) work with highly sensitive data and methods to carry out operations. Handling information
+            for operations must be resilient against cybersecurity threats and exposure. The following explains the
+            security and encryption policies used by EODTOC to protect data stored by the application.
+          </p>
+        </header>
+
+        <section class="security-prose" aria-labelledby="privacy-title">
+          <h2 id="privacy-title">Privacy</h2>
+          <p>
+            Information entered by the Tech is stored locally and can be backed up to the Tech's Apple or Google account.
+            Sensitive data, such as Operations and After Action Reports (AARs), are always encrypted with a unique key for each Tech.
+            Keys are always generated locally and never shared with the developers of EODTOC.
+          </p>
+          <p>
+            This key is stored in the Tech's local Keychain (Apple) or Keystore (Android) and access is locked behind biometrics (e.g. FaceID) or device passcode. The app can also export a recovery key for backup. For maximum security, the key can
+            be split between the Tech's device and a physical key so that both the device passcode and the
+            physical key are required for decryption.
+          </p>
+          <p>
+            Personal Tech data, such as last name, e-mail, and rank, are always optional and require biometric
+            or device passcode confirmation to share with other Techs. Networking capabilities are limited to map rendering with
+            Apple Maps and checking app status through the <a href="../status/">EODTOC Status page</a>.
+          </p>
+        </section>
+
+        <section class="security-prose" aria-labelledby="encryption-title">
+          <h2 id="encryption-title">Encryption and Data Security</h2>
+          <p>
+            Sensitive data are protected using a quantum-resilient encryption process with algorithms designed to
+            defend against harvest-now, decrypt-later attacks. A general explanation first, then the details:
+          </p>
+          <p>
+            When the Tech first downloads the EODTOC application, they are generated a keypair: one private key and one
+            public key. Sensitive information is not directly encrypted using these keys. Instead, the payload is
+            first encrypted with a fresh <em>helper</em> key, then the helper key is itself encrypted using the
+            Tech's <em>public</em> key.
+          </p>
+          <p>
+            The helper key is symmetric, meaning it can both encrypt and decrypt data. The Tech's keypair is
+            asymmetric, meaning only the Tech's private key can be used to unlock helper keys. The unlocked helper key
+            can then be used to decrypt the payload.
+          </p>
+          <p>
+            Specifically, the Tech keypair operates a quantum-secure Key Encapsulation Mechanism
+            (ML-KEM-1024) to safely store the symmetric 256-bit helper key. The helper key uses the AES-GCM algorithm
+            to secure the payload (quantum-secure when using a 256-bit key).
+          </p>
+          <p>
+            The two-step process removes the unlock key requirement when data needs to be stored compared to using a
+            symmetric key directly, reducing the amount of time an unlock key needs to remain in device memory.
+          </p>
+        </section>
+
+        <section class="security-prose" aria-labelledby="physical-key-title">
+          <h2 id="physical-key-title">Physical Key Option</h2>
+          <p>
+            To maximize security in the case of lost or stolen devices, an option is provided to split the private
+            key between the Tech's device and a writable NFC tag. By splitting the key, encrypted data can only
+            be unlocked if both the Tech's biometric or passcode is verified and the NFC tag is read in, each
+            providing its required half of the key.
+          </p>
+          <p>
+            The NFC tag can be kept in a physically safe location so that even if the device is obtained by a
+            sophisticated attacker, the data remains inaccessible without the tag.
+          </p>
+        </section>
+
+        <section class="security-prose" aria-labelledby="intelligence-title">
+          <h2 id="intelligence-title">Intelligence</h2>
+          <p>
+            <em>This section relates only to Apple devices that support Apple Intelligence. Development is ongoing for
+            local AI on Android devices.</em>
+          </p>
+          <p>
+            Artificial Intelligence (AI) backed features can be enabled on supported devices. On Apple devices, this
+            is through the Foundation Models framework, which operates fully on-device and privately. AI features are
+            always off by default. Techs can give and revoke permission to the framework at any time. Any future
+            AI integrations will be integrated with first-class security and privacy.
+          </p>
+        </section>
+
+        <section class="security-prose security-references" aria-labelledby="references-title">
+          <h2 id="references-title">References</h2>
+          <p><a href="https://csrc.nist.gov/pubs/fips/203/final" rel="noreferrer">NIST FIPS 203 / ML-KEM</a></p>
+          <p><a href="https://csrc.nist.gov/pubs/fips/197/final" rel="noreferrer">NIST FIPS 197 / AES</a></p>
+          <p><a href="https://media.defense.gov/2022/Sep/07/2003071836/-1/-1/1/CSI_CNSA_2.0_FAQ_.PDF" rel="noreferrer">CNSA 2.0 FAQ</a></p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

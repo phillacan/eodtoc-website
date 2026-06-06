@@ -822,6 +822,131 @@ body.is-scrolled .feature-scroll {
   }
 }
 
+.security-page {
+  color: var(--text);
+  background:
+    linear-gradient(180deg, #080b12 0%, #0b1017 44%, #080b12 100%);
+}
+
+.security-nav {
+  width: min(680px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 28px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.security-nav .title {
+  text-decoration: none;
+}
+
+.security-nav-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.security-main {
+  width: min(680px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(48px, 8vw, 82px) 0 96px;
+}
+
+.security-article {
+  display: grid;
+  gap: 38px;
+}
+
+.security-hero {
+  width: 100%;
+}
+
+.security-hero h1 {
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(42px, 7vw, 64px);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.04;
+}
+
+.security-byline {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  color: var(--subtle);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.security-byline span + span {
+  color: var(--muted);
+}
+
+.security-hero > p:last-child {
+  margin-top: 34px;
+  color: var(--muted);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.72;
+}
+
+.security-prose {
+  max-width: 100%;
+}
+
+.security-prose + .security-prose {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.security-prose h2 {
+  color: #fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.22;
+}
+
+.security-prose p {
+  margin-top: 18px;
+  color: var(--muted);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.78;
+}
+
+.security-prose em {
+  color: var(--text);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.security-prose a {
+  color: var(--gold);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 224, 0, 0.34);
+  text-underline-offset: 4px;
+}
+
+.security-references {
+  margin-top: 12px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 .email {
   position: fixed;
   left: 50%;
@@ -912,6 +1037,11 @@ body.is-at-end .email {
     font-size: clamp(29px, 9vw, 42px);
   }
 
+  .security-main {
+    width: min(680px, calc(100% - 40px));
+    padding-top: 52px;
+  }
+
   .feature-card--security {
     gap: 18px;
   }
@@ -957,6 +1087,42 @@ body.is-at-end .email {
   .feature-scroll {
     width: calc(100% - 22px);
     padding-top: 32vh;
+  }
+
+  .security-nav {
+    width: calc(100% - 36px);
+    align-items: flex-start;
+  }
+
+  .security-nav-label {
+    padding-top: 4px;
+    font-size: 10px;
+  }
+
+  .security-main {
+    width: calc(100% - 36px);
+    padding-top: 42px;
+    padding-bottom: 72px;
+  }
+
+  .security-hero h1 {
+    font-size: clamp(38px, 11vw, 48px);
+    line-height: 1.08;
+  }
+
+  .security-byline {
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .security-prose h2 {
+    font-size: 22px;
+  }
+
+  .security-hero > p:last-child,
+  .security-prose p {
+    font-size: 19px;
+    line-height: 1.72;
   }
 
   .feature-card {
