@@ -380,6 +380,15 @@ body.is-scrolled .feature-scroll {
   line-height: 1.62;
 }
 
+.feature-details {
+  font-weight: 500;
+}
+
+.feature-details a {
+  color: var(--gold);
+  text-underline-offset: 3px;
+}
+
 .feature-visual {
   min-width: 0;
 }
@@ -960,6 +969,31 @@ body.is-scrolled .feature-scroll {
   opacity: var(--email-opacity);
   transform: translateX(-50%);
   transition: opacity 160ms ease;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 260ms ease, margin-left 260ms ease, opacity 180ms ease;
+}
+
+.footer-links a {
+  color: var(--subtle);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 160ms ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--text);
 }
 
 body.is-scrolled .email {
@@ -967,6 +1001,12 @@ body.is-scrolled .email {
 }
 
 body.is-at-end .email {
+  opacity: 1;
+}
+
+body.is-at-end .footer-links {
+  max-width: 220px;
+  margin-left: 9px;
   opacity: 1;
 }
 
