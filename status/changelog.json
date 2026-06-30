@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-06-28T00:00:00Z",
+    "version": "0.0260627",
+    "changed": [
+      "Draft AARs now encrypted if leaving the app or device is locked.",
+      "New mission summary shows after completing operation.",
+      "Sharing contact now includes Tech's public key for encrypted document sharing.",
+      "Opening tools from Siri available for supported devices.",
+      "Minor bug fixes and UI improvements."
+    ],
+    "developer-notes": "Local-only share feature in development."
+  }
+]

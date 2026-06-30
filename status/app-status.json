@@ -1,13 +1,14 @@
 [
   {
-    "title": "IN DEVELOPMENT",
+    "title": "CLOSED BETA",
+    "version": "0.0260627",
     "severity": "mild",
     "severity-types": [
       "mild",
       "fire",
       "diablo"
     ],
-    "timestamp": "2026-05-27T06:25:57Z",
+    "timestamp": "2026-06-27T00:00:00Z",
     "body": "Pre-release. Coming Soon.",
     "affected": [
       "ios"
@@ -19,6 +20,7 @@
   },
   {
     "title": "IN DEVELOPMENT",
+    "version" : "0.0",
     "severity": "mild",
     "severity-types": [
       "mild",

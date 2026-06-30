@@ -9,20 +9,32 @@
   </head>
   <body class="status-page">
     <main class="status-shell">
-      <header class="status-header" aria-label="Status log">
-        <div class="status-brand">
-          <span class="status-word">STATUS</span>
-          <span class="log-word">LOG</span>
-        </div>
-        <span class="status-state">INACTIVE</span>
+      <header class="status-header" aria-label="EODTOC status">
+        <a class="status-brand" href="../" aria-label="EODTOC home">
+          <span class="brand-word">
+            <span class="eod-word">EOD</span><span class="toc-word">TOC</span>
+          </span>
+          <span class="status-word">Status</span>
+        </a>
+        <span class="status-state">BETA</span>
       </header>
 
-      <section class="status-list" aria-label="Status entries">
+      <section class="status-list" aria-label="Current status">
         <article class="status-entry">
-          <h1>Hello World</h1>
-          <p><em>In development. Coming soon.</em></p>
+          <header class="status-entry-title-line">
+            <h1 id="status-title"></h1>
+            <span class="status-severity-dot" id="status-severity-dot" aria-hidden="true"></span>
+          </header>
+          <p id="status-body"></p>
         </article>
       </section>
+
+      <section class="changelog" aria-labelledby="changelog-title">
+        <h2 id="changelog-title">CHANGELOG</h2>
+        <div class="changelog-list" id="changelog-list" aria-live="polite"></div>
+      </section>
     </main>
+
+    <script src="status.js" defer></script>
   </body>
 </html>
