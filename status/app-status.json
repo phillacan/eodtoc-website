@@ -14,27 +14,7 @@
       "ios"
     ],
     "affected-type": [
-      "ios",
-      "android"
-    ]
-  },
-  {
-    "title": "IN DEVELOPMENT",
-    "version" : "0.0",
-    "severity": "mild",
-    "severity-types": [
-      "mild",
-      "fire",
-      "diablo"
-    ],
-    "timestamp": "2026-05-27T06:25:57Z",
-    "body": "Pre-release. Coming Soon.",
-    "affected": [
-      "android"
-    ],
-    "affected-type": [
-      "ios",
-      "android"
+      "ios"
     ]
   }
 ]

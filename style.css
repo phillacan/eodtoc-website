@@ -120,6 +120,71 @@ body.is-scrolled .splash {
   transform: translate(-50%, -50%) scale(0.98);
 }
 
+.scroll-cue {
+  position: fixed;
+  left: 50%;
+  bottom: 14px;
+  z-index: 11;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  color: var(--subtle);
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: auto;
+  transform: translateX(-50%);
+  animation: scroll-cue-in 500ms ease-out 850ms forwards;
+  transition: color 160ms ease, opacity 160ms ease;
+}
+
+.scroll-cue span {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  animation: scroll-cue-pulse 3.2s ease-in-out infinite;
+}
+
+.scroll-cue i {
+  color: var(--orange);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.scroll-cue:hover,
+.scroll-cue:focus-visible {
+  color: var(--text);
+}
+
+.scroll-cue:focus-visible {
+  border-radius: 8px;
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+body.is-scrolled .scroll-cue {
+  opacity: 0;
+  pointer-events: none;
+  animation: none;
+}
+
+@keyframes scroll-cue-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-cue-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
 .title {
   display: flex;
   align-items: baseline;
@@ -1010,7 +1075,7 @@ body.is-scrolled .feature-scroll {
   font-weight: 800;
   letter-spacing: 0.1em;
   white-space: nowrap;
-  opacity: var(--email-opacity);
+  opacity: 0;
   transform: translateX(-50%);
   transition: opacity 160ms ease;
   display: flex;
@@ -1328,6 +1393,15 @@ body.is-at-end .footer-links {
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 1ms !important;
+  }
+
+  .scroll-cue {
+    opacity: 1;
+    animation: none;
+  }
+
+  body.is-scrolled .scroll-cue {
+    opacity: 0;
   }
 
   .feature-section.is-title-revealed .feature-copy > .feature-kicker,
