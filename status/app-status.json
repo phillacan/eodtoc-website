@@ -1,15 +1,14 @@
 [
   {
-    "title": "CLOSED BETA",
-    "version": "0.0260627",
+    "title": "ACTIVE",
     "severity": "mild",
     "severity-types": [
       "mild",
       "fire",
       "diablo"
     ],
-    "timestamp": "2026-06-27T00:00:00Z",
-    "body": "Pre-release. Coming Soon.",
+    "timestamp": "2026-09-18T00:00:00Z",
+    "body": "EODTOC is operating normally.",
     "affected": [
       "ios"
     ],

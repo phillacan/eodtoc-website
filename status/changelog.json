@@ -1,10 +1,9 @@
 [
   {
-    "timestamp": "2026-09-09T00:00:00Z",
-    "version": "0.0260909",
+    "timestamp": "2026-09-18T00:00:00Z",
+    "version": "1.0",
     "changed": [
-      "Bug fixes and UI improvements."
-    ],
-    "developer-notes": "Ready for App Store submission."
+      "Welcome to EODTOC."
+    ]
   }
 ]
