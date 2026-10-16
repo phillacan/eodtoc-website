@@ -1114,7 +1114,7 @@ body.is-at-end .email {
 }
 
 body.is-at-end .footer-links {
-  max-width: 220px;
+  max-width: 300px;
   margin-left: 9px;
   opacity: 1;
 }
@@ -1408,5 +1408,21 @@ body.is-at-end .footer-links {
   .feature-section.is-title-revealed .feature-copy > h2,
   .feature-section.is-revealed .feature-copy > p:last-child {
     animation-delay: 0ms !important;
+  }
+}
+
+/* Support uses the shared article layout, with a prominent contact link. */
+.support-email {
+  color: var(--gold);
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 520px) {
+  .email {
+    width: calc(100% - 36px);
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
   }
 }
