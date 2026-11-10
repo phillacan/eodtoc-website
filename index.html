@@ -3,61 +3,87 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=6765794276">
     <title>EOD TOC</title>
     <link rel="icon" type="image/png" href="/favicon-small.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=65">
   </head>
-  <body>
-    <header class="top-bar" aria-label="EOD TOC availability">
-      <div class="title title--compact">
+  <body class="home-page">
+    <header class="top-bar is-compact" aria-label="Main navigation">
+      <a class="title title--compact site-brand" href="./" aria-label="EOD TOC home">
         <span class="eod">EOD</span>
         <span class="toc">TOC</span>
-      </div>
-      <div class="soon-row soon-row--compact">
-        <span class="soon-label">SOON</span>
-        <div class="icons">
-          <i class="bi bi-apple icon" aria-label="Apple Icon"></i>
+      </a>
+      <nav class="site-nav" id="site-navigation" aria-label="Pages">
+        <div class="nav-pages">
+          <a href="security/">Security</a>
+          <a href="status/">Updates</a>
+          <a href="support/">Support</a>
         </div>
+        <a class="nav-contact" href="mailto:dev@eodtoc.com">dev@eodtoc.com</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-download" href="https://apps.apple.com/app/eodtoc/id6765794276" aria-label="Download EODTOC on the App Store">
+          <span class="nav-download-label">Download</span>
+          <svg class="store-apple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282"/></svg>
+        </a>
+        <button class="nav-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
       </div>
     </header>
 
+    <div id="page-content">
     <main>
-      <section class="splash" aria-label="EOD TOC">
-        <div class="title">
-          <span class="eod">EOD</span>
-          <span class="toc">TOC</span>
-        </div>
-        <div class="soon-row">
-          <span class="soon-label">SOON</span>
-          <div class="icons">
-            <i class="bi bi-apple icon" aria-label="Apple Icon"></i>
-          </div>
-        </div>
-      </section>
 
-      <a class="scroll-cue" href="#features-title" aria-label="Scroll to explore features">
-        <span>SCROLL</span>
-        <i class="bi bi-chevron-down" aria-hidden="true"></i>
-      </a>
-
-      <section class="feature-scroll" aria-labelledby="features-title">
-        <div class="feature-heading">
-          <h1 id="features-title">Op tracking and field-ready tools for Technicians.</h1>
-        </div>
-
+      <section class="feature-scroll">
         <div class="feature-grid">
-          <article class="feature-section" data-feature>
+          <div class="shared-phone-stage">
+            <div class="phone-showcase">
+              <div class="device-shell screenshot-shell shared-phone-shell" aria-hidden="true">
+                <div class="shared-phone-panel is-active" data-phone-panel>
+                  <div class="preview-image-stack">
+                    <img class="is-current" src="demo-images/operations.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                    <img src="demo-images/after-action-report.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                  </div>
+                </div>
+                <div class="shared-phone-panel" data-phone-panel>
+                  <div class="preview-image-stack">
+                    <img class="is-current" src="demo-images/tools.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                    <img src="demo-images/hazard-map.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                  </div>
+                </div>
+                <div class="shared-phone-panel" data-phone-panel>
+                  <video class="preview-video" data-demo-video muted playsinline loop preload="metadata" poster="demo-images/aar-generator-poster.webp" width="1206" height="2622">
+                    <source src="demo-images/aar-generator-demo.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="shared-phone-panel" data-phone-panel>
+                  <div class="preview-image-stack">
+                    <img class="is-current" src="demo-images/security-data.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                    <img src="demo-images/security-nfc.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-copy-stage">
+          <article class="feature-section is-active-item" data-feature>
             <div class="feature-copy">
-              <p class="feature-kicker">Operations and Reports</p>
               <h2>Plan, execute, and review missions.</h2>
-              <p>Plan and track current operations in real time with location and image support. Create after-action reports to catalogue successes, deficiencies, and adjustments. </p>
+              <p>Plan and track operations in real time with location and image support. Write and share after-action reports to catalog successes and deficiencies.</p>
             </div>
             <div class="feature-visual visual-operations" aria-hidden="true">
-              <div class="device-shell screenshot-shell">
-                <div class="preview-image-stack">
-                  <img src="demo-images/op-demo.webp" alt="" loading="lazy" decoding="async">
-                  <img src="demo-images/def-demo.webp" alt="" loading="lazy" decoding="async">
+              <div class="phone-showcase" data-phone-showcase>
+                <div class="device-shell screenshot-shell">
+                  <div class="preview-image-stack">
+                    <img class="is-current" src="demo-images/operations.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                    <img src="demo-images/after-action-report.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                  </div>
                 </div>
               </div>
             </div>
@@ -65,15 +91,16 @@
 
           <article class="feature-section" data-feature>
             <div class="feature-copy">
-              <p class="feature-kicker">Training and Field Tools</p>
-              <h2>EOD Technician-tested tools.</h2>
+              <h2>EOD Tech-tested tools.</h2>
               <p>Quick access to common field calculations, plus an MGRS-supported map for visualizing hazard areas.</p>
             </div>
             <div class="feature-visual visual-training" aria-hidden="true">
-              <div class="device-shell screenshot-shell">
-                <div class="preview-image-stack">
-                  <img src="demo-images/xrc-demo.webp" alt="" loading="lazy" decoding="async">
-                  <img src="demo-images/hmap-demo.webp" alt="" loading="lazy" decoding="async">
+              <div class="phone-showcase" data-phone-showcase>
+                <div class="device-shell screenshot-shell">
+                  <div class="preview-image-stack">
+                    <img class="is-current" src="demo-images/tools.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                    <img src="demo-images/hazard-map.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,39 +108,15 @@
 
           <article class="feature-section feature-section--intelligence" data-feature>
             <div class="feature-copy">
-              <p class="feature-kicker ai-gradient-text">Intelligence</p>
-              <h2>Always-Private <span class="ai-gradient-text ai-wordmark">AI</span> Integration.</h2>
-              <p>On supported devices, generate mission summaries from operation logs in one press. Auto-name note titles. Fully offline and private.</p>
+              <h2>Private <span class="ai-wordmark">AI</span> Integration.</h2>
+              <p>On supported devices, generate mission summaries from Op logs in one press. Auto-name note titles. Offline and private.</p>
             </div>
             <div class="feature-visual visual-intel" aria-hidden="true">
-              <div class="device-shell intelligence-shell">
-                <div class="ai-summary-demo">
-                  <div class="operation-entry">
-                    <div>
-                      <strong>717 CACHE</strong>
-                      <span>14:17</span>
-                    </div>
-                    <div>
-                      <strong>REAL</strong>
-                      <span>8 EVTS</span>
-                    </div>
-                  </div>
-                  <div class="mission-summary-block">
-                    <p>Mission Summary</p>
-                    <div class="summary-stage">
-                      <div class="summary-empty">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
-                      <div class="summary-preview">
-                        <span>Responded to a reported UXO cache at grid 717. Established control, confirmed hazard indicators, and coordinated removal actions with site security.</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="generate-row">
-                    <span>GENERATE</span>
-                  </div>
+              <div class="phone-showcase">
+                <div class="device-shell screenshot-shell placeholder-phone-shell">
+                  <video class="preview-video" data-demo-video muted playsinline loop preload="metadata" poster="demo-images/aar-generator-poster.webp" width="1206" height="2622">
+                    <source src="demo-images/aar-generator-demo.mp4" type="video/mp4">
+                  </video>
                 </div>
               </div>
             </div>
@@ -121,106 +124,43 @@
 
           <article class="feature-section feature-section--security" data-feature>
             <div class="feature-copy">
-              <p class="feature-kicker">Security First</p>
               <h2>Protected by SoTA encryption.</h2>
               <p>
-                Reports and operations are encrypted on-device with quantum-safe algorithms. Biometric authentication and auto-delete policies are available for stricter security.
+                Reports and Ops are encrypted on-device with post-quantum algorithms. Biometric and hardware-backed auth are available for stricter security.
                 <span class="feature-details">(read the details <a href="security/">here</a>)</span>
               </p>
             </div>
             <div class="feature-visual visual-security" aria-hidden="true">
-              <i class="bi bi-lock-fill security-lock"></i>
+              <div class="phone-showcase">
+                <div class="device-shell screenshot-shell">
+                  <div class="preview-image-stack">
+                    <img class="is-current" src="demo-images/security-data.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                    <img src="demo-images/security-nfc.webp" width="720" height="1566" alt="" loading="lazy" decoding="async">
+                  </div>
+                </div>
+              </div>
             </div>
           </article>
+
+            <div class="feature-item-controls">
+              <span data-feature-count>1 of 4</span>
+              <div class="demo-progress" aria-hidden="true"><div data-demo-progress></div></div>
+              <div class="demo-playback-controls">
+                <button class="phone-playback" type="button" data-feature-pause aria-keyshortcuts="Space" aria-label="Pause demos" title="Pause demos (Space)"><i class="bi bi-pause-fill"></i></button>
+                <button type="button" data-feature-prev aria-keyshortcuts="ArrowLeft" aria-label="Previous feature" title="Previous feature (←)"><svg class="demo-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+                <button type="button" data-feature-next aria-keyshortcuts="ArrowRight" aria-label="Next feature" title="Next feature (→)"><svg class="demo-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="end-availability" aria-label="EOD TOC coming soon">
-          <span class="end-soon-label">COMING SOON</span>
-        </div>
       </section>
     </main>
 
-    <div class="email">
-      <span>dev@eodtoc.com</span>
-      <nav class="footer-links" aria-label="Additional pages">
-        <span aria-hidden="true">|</span>
-        <a href="support/">Support</a>
-        <span aria-hidden="true">|</span>
-        <a href="security/">Security</a>
-        <span aria-hidden="true">|</span>
-        <a href="status/">Status</a>
-      </nav>
+
+
     </div>
 
-    <script>
-      const root = document.documentElement;
-      const features = [...document.querySelectorAll("[data-feature]")];
-
-      function clamp(value, min, max) {
-        return Math.min(Math.max(value, min), max);
-      }
-
-      function updateScrollState() {
-        const progress = clamp(window.scrollY / 115, 0, 1);
-        const splashProgress = clamp(window.scrollY / 130, 0, 1);
-        const topProgress = clamp((window.scrollY - 46) / 58, 0, 1);
-        root.style.setProperty("--scroll-progress", progress.toFixed(3));
-        root.style.setProperty("--top-progress", topProgress.toFixed(3));
-        root.style.setProperty("--top-offset", `${(-14 + (14 * topProgress)).toFixed(2)}px`);
-        root.style.setProperty("--top-bg-alpha", (0.72 * topProgress).toFixed(3));
-        root.style.setProperty("--top-border-alpha", (0.08 * topProgress).toFixed(3));
-        root.style.setProperty("--top-shadow-alpha", (0.32 * topProgress).toFixed(3));
-        root.style.setProperty("--splash-opacity", (1 - splashProgress).toFixed(3));
-        root.style.setProperty("--splash-offset", `${(-128 * splashProgress).toFixed(2)}px`);
-        root.style.setProperty("--splash-scale", (1 - (0.04 * splashProgress)).toFixed(3));
-        root.style.setProperty("--email-opacity", (1 - (0.34 * progress)).toFixed(3));
-        document.body.classList.toggle("is-scrolled", window.scrollY > 2);
-        document.body.classList.toggle("is-top-visible", topProgress > 0.02);
-
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        const distanceFromEnd = maxScroll - window.scrollY;
-        document.body.classList.toggle("is-at-end", distanceFromEnd < 140);
-
-        const viewportCenter = window.innerHeight * 0.52;
-        const titleRevealRange = Math.min(360, window.innerHeight * 0.36);
-        const revealRange = Math.min(260, window.innerHeight * 0.24);
-        const isPortrait = window.innerHeight > window.innerWidth;
-
-        features.forEach((feature) => {
-          const rect = feature.getBoundingClientRect();
-          const featureCenter = rect.top + rect.height / 2;
-          const distance = Math.abs(featureCenter - viewportCenter);
-          const visual = feature.querySelector(".feature-visual");
-
-          if (window.scrollY <= 2) return;
-
-          const visualRect = visual.getBoundingClientRect();
-
-          if (visualRect.top < window.innerHeight && visualRect.bottom > 0) {
-            visual.classList.add("is-demo-visible");
-          }
-
-          if (isPortrait) {
-            if (rect.top <= window.innerHeight * 0.84 && rect.bottom > 0) {
-              feature.classList.add("is-title-revealed", "is-revealed");
-            }
-
-            return;
-          }
-
-          if (distance <= titleRevealRange) {
-            feature.classList.add("is-title-revealed");
-          }
-
-          if (distance <= revealRange) {
-            feature.classList.add("is-revealed");
-          }
-        });
-      }
-
-      updateScrollState();
-      window.addEventListener("scroll", updateScrollState, { passive: true });
-      window.addEventListener("resize", updateScrollState);
-    </script>
+    <script src="navigation.js?v=34" type="module"></script>
   </body>
 </html>
