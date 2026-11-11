@@ -1,0 +1,88 @@
+# EODTOC
+
+> EODTOC (EOD TOC) is an iOS app for Explosive Ordnance Disposal (EOD) Technicians. It brings together operation tracking, after-action reports, field notes, calculators, and hazard-area mapping.
+
+EODTOC is a supplemental training and reference aid for EOD Technicians. The app asks users to independently verify tool calculations and distance measurements against currently approved standard operating procedures (SOPs) and calculations. TDA Estimation specifically calls for verification with an approved service-specific TDA calculator.
+
+The app's main tabs are TOC, AAR, Tools, and Profile. Its workflow connects an active operation's event log, notes, photos, and tool results with later review and after-action reporting. Personal profile information is optional.
+
+## Operations and the TOC tab
+
+- Start a named operation, monitor its elapsed time, pause or resume the operation clock, and finish and save the operation for later review.
+- Record timestamped events using common event choices such as preparation, en route, on scene, robot deployment, X-ray, and return to base, or enter a custom event title and comments.
+- Event details can include comments, recorded coordinates, and a location title. Where coordinates are available, switch between latitude/longitude and Military Grid Reference System (MGRS) display.
+- Keep operation notes, take photos or import them from the photo library, and review photos with captions and available location information. An operation supports up to 20 photos.
+- Save tool results into the active operation's event log with the tools' "Log in Op" action. Logged tool entries preserve the inputs and results for later review.
+- View recorded operation locations on a map. Completed operations retain their event history, notes, photos, and logged tool results for review in Past Ops.
+- Finishing an operation presents a summary with duration, event and tool-log counts, and photo count. Operation text can be prepared and copied for use outside the app.
+- A Live Activity shows the operation clock and running or paused status on the Lock Screen and, on compatible devices, in the Dynamic Island, with pause/resume controls.
+
+## After Action Reports and deficiencies
+
+- Create an After Action Report (AAR) with a title, date, mission type, mission summary, sustains, improvements, and comments. A report can be linked to a saved operation so its recorded context is available during review.
+- Save work in progress as a draft and resume it later. Saved reports are available in the AAR archive.
+- Record sustains to capture what went well and improvements to capture what needs attention. Deficiencies can be reviewed across reports, given follow-up comments, and marked "To Address" or "Resolved".
+- On supported devices with intelligence enabled, generate a mission-summary draft from a linked operation's recorded events and operation notes, then review and edit it in the report.
+- Copy a formatted text version of a report, including its metadata, mission summary, sustains, outstanding improvements, and comments. Text copied out of the app is plaintext and must be protected separately.
+- Optional automatic AAR deletion can be set to Never, 30 days, or 90 days; Never is the default. Expiration uses the report date and the end of the relevant day in UTC. Cleanup occurs while the app is active or when it next opens.
+- Deleting an AAR also removes its deficiencies, but does not delete its linked operation or an in-progress draft. Deleting an operation that has a linked AAR also deletes that report; the app asks for confirmation.
+
+## Field tools
+
+Tools can be opened from the Tools tab. Their "Log in Op" actions attach results to a currently active operation.
+
+- TA Matrix: record Low, Medium, or High selections for the Command, Victim, and Time categories and review the selections together.
+- PIES-EC: organize observations into Power Source, Initiator, Explosives, Switch, Enhancements, and Container fields.
+- Time Fuze Calc: enter a measured test length and burn time, then a target delay, to obtain a calculated length and tick count. Includes a burn stopwatch, feet/meters selection, and reset controls.
+- TDA Estimation: enter net explosive weight and a selected or custom K-factor to obtain a reference distance. Supports pounds/feet and kilograms/meters and can display the estimate on a map around a current or selected location.
+- Xray Calc: estimate an adjusted pulse setting from an initial distance, initial pulse count, and new distance using the inverse-square relationship. Supports distance entry in feet or meters.
+
+These tools provide reference calculations and structured recording; their outputs require the independent verification described in the app's safety acknowledgment.
+
+## Hazard Map
+
+Select an accident site on the map and visualize an exclusion radius and downwind area. Adjustable parameters include exclusion radius, wind direction, downwind distance, and cone spread. The map supports MGRS and latitude/longitude coordinate display and a control to recenter on the user's location. Hazard geometry reflects the parameters entered by the user. Map rendering uses Apple Maps.
+
+## Standalone notes
+
+The Notes area in Tools is separate from an active operation's notes. Create, edit, search, and delete field notes, with photos captured in the app or imported from the photo library. Search matches both titles and note contents, and notes are listed by most recently modified. Optional intelligence can supply a title for an untitled note based on its contents.
+
+## Intelligence and Siri
+
+Intelligence is optional and can be enabled or disabled in Settings. Mission-summary generation and automatic note titles run locally on supported devices with Apple Intelligence enabled. Availability depends on device eligibility, model readiness, and Apple's supported languages and regions. The ordinary operation, reporting, and tool workflows do not require generated summaries or titles.
+
+On supported iOS versions, Siri's "Create Note" integration can add user-provided text and image attachments as an event in the active operation. This action requires an active operation and EODTOC's Intelligence setting to be enabled; it does not create a standalone field note. The app does not expose stored encrypted Ops or AAR contents to Siri for retrieval.
+
+## Profile, contacts, and quick access
+
+- Optionally add a name, phone number, email address, and profile photo.
+- Maintain a contact list, add or edit contacts manually, search contacts, and open phone or email actions for saved contact details.
+- Exchange contact details using QR codes. Display a code to share contact information, or scan a code and review the imported details before saving.
+- Use Profile to reach Past Ops, Contacts, Data Encryption, Settings, privacy information, and the changelog.
+- Customize the footer style and two quick-access shortcuts. Available shortcut actions include New Note, New AAR, TDA Estimation, X-ray Calc, and Time Fuze Calc.
+- Add a small or medium EODTOC Tools Home Screen widget for quick access to Time Fuze, Xray, and TDA Estimation.
+
+## Local data and access protection
+
+Operations, AARs, notes, and optional profile information are stored locally. Ops and AARs have encrypted storage and configurable access protection. The developer cannot view a Technician's stored Ops or AARs and never receives the private decryption key.
+
+- Protect access to encrypted records with Face ID or the device passcode, subject to device capabilities. A no-additional-authentication option is also available; the app describes it as intended for air-gapped devices in secure locations.
+- Configure automatic re-locking of protected pages after 10 seconds, 5 minutes, 15 minutes, 1 hour, or Never. The default is 5 minutes. Protected pages also re-lock when the app is closed or the phone is locked.
+- Optionally require an NFC tag together with local authentication to unlock protected data. Manage up to three connected tags, including naming and revoking tags.
+- Export a private decryption key for recovery and keep it securely off the device. If all NFC tags are lost or corrupted, that saved key is required to recover encrypted data. The developer cannot recover the key and will never ask a user to disclose it.
+- Delete local records and encryption keys through Profile > Data Encryption > Delete All Local Data. This action is irreversible in the app and returns it to initial setup.
+
+See the published privacy and security pages for the full policies. Local storage and on-device intelligence should not be interpreted as a promise that every feature works without network access; map rendering uses Apple Maps. Hardware security-key support described as in development on the security page should not be treated as a released capability.
+
+## Official pages
+
+- [EODTOC home](https://eodtoc.com/): Product overview and app demonstrations.
+- [Security](https://eodtoc.com/security/): Local data protection, authentication options, recovery keys, and private intelligence features.
+- [Privacy policy](https://eodtoc.com/privacy/): Data handling, local storage, deletion, and on-device intelligence.
+- [Support](https://eodtoc.com/support/): Help with encrypted records, intelligence availability, and bug reports. Contact: dev@eodtoc.com.
+- [Updates](https://eodtoc.com/status/): Published release notes and changelog.
+- [App Store](https://apps.apple.com/app/eodtoc/id6765794276): Download EODTOC and check current device compatibility and availability.
+
+## Optional
+
+- [Changelog JSON](https://eodtoc.com/status/changelog.json): Machine-readable published release notes.
